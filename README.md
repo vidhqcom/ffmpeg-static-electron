@@ -1,5 +1,7 @@
 # ffmpeg-static
 
+**-->Modified version<--** adding `browser`, as a platform option, for use case when module is bundled using browserify. and added to html using src.The module untimately it returns a file path to the binary. This is tailored for a use case such as that of [autoEdit.io](http://autoEdit.io) where it is an electron app where the front end is in backbone and bundled with browserify, while the backend, is a series of node modules, where the code to run ffmpeg ultimatly resides. 
+
 ffmpeg static binaries for Mac OSX and Linux and Windows
 
 [![build status](https://secure.travis-ci.org/eugeneware/ffmpeg-static.png)](http://travis-ci.org/eugeneware/ffmpeg-static)
