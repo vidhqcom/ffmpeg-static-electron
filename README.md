@@ -1,4 +1,4 @@
-# `ffmpeg-static-electron`
+# `ffmpeg-static`
 
 **-->Modified version<--** adding `browser`, as a platform option, for use case when module is bundled using browserify. and added to html using src.The module untimately it returns a file path to the binary. This is tailored for a use case such as that of [autoEdit.io](http://autoEdit.io) where it is an electron app where the front end is in backbone and bundled with browserify, while the backend, is a series of node modules, where the code to run ffmpeg ultimatly resides. 
 
@@ -15,7 +15,7 @@ ffmpeg static binaries for Mac OSX and Linux and Windows
 This module is installed via npm:
 
 ``` bash
-$ npm install ffmpeg-static-electron
+$ npm install ffmpeg-static
 ```
 
 ## Example Usage
@@ -23,7 +23,7 @@ $ npm install ffmpeg-static-electron
 Returns the path of a statically linked ffmpeg binary on the local filesystem.
 
 ``` js
-var ffmpeg = require('ffmpeg-static-electron');
+var ffmpeg = require('ffmpeg-static');
 console.log(ffmpeg.path);
 // /Users/eugeneware/Dropbox/work/ffmpeg-static/bin/darwin/x64/ffmpeg
 ```
