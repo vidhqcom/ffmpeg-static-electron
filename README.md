@@ -23,7 +23,7 @@ $ npm install ffmpeg-static-electron
 Returns the path of a statically linked ffmpeg binary on the local filesystem.
 
 ``` js
-var ffmpeg = require('ffmpeg-static');
+var ffmpeg = require('ffmpeg-static-electron');
 console.log(ffmpeg.path);
 // /Users/eugeneware/Dropbox/work/ffmpeg-static/bin/darwin/x64/ffmpeg
 ```
