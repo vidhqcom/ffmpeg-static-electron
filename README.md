@@ -1,14 +1,18 @@
 # `ffmpeg-static-electron`
 
-**-->Modified version<--** adding `browser`, as a platform option, for use case when module is bundled using browserify. and added to html using src.The module untimately it returns a file path to the binary. This is tailored for a use case such as that of [autoEdit.io](http://autoEdit.io) where it is an electron app where the front end is in backbone and bundled with browserify, while the backend, is a series of node modules, where the code to run ffmpeg ultimatly resides. 
+The module returns a file path to the binary for the target operating system. 
 
-see also[modified ffmpeg-static](https://github.com/pietrop/ffmpeg-static)
+It is modified version from the original [ffmpeg-static](https://github.com/pietrop/ffmpeg-static) to use [`electron-builder` file macros  in `package.json`, where OS name are `mac`, `linux` or `win`](https://www.electron.build/file-patterns/#file-macros)
+
+In `ffmpeg-static`, recognising the target OS is done with [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform) where mac os x is  recognised as`darwin` rather then `mac`.
+
+The need to tailor ffmpeg-static to use with `electron-builder` came from a use cases such as that of [autoEdit.io](http://autoEdit.io). 
+
+<!-- I've also added `browser`, as a platform option, for use case when module is use client side, eg bundled using browserify.-->
 
 ---
 
 ffmpeg static binaries for Mac OSX and Linux and Windows
-
-[![build status](https://secure.travis-ci.org/eugeneware/ffmpeg-static.png)](http://travis-ci.org/eugeneware/ffmpeg-static)
 
 ## Installation
 
