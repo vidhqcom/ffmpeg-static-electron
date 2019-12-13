@@ -10,6 +10,10 @@ The need to tailor ffmpeg-static to use with `electron-builder` came from a use 
 
 <!-- I've also added `browser`, as a platform option, for use case when module is use client side, eg bundled using browserify.-->
 
+See here for more info on [How to package ffmpeg with the fluent-ffmpeg node library in electron, so that you only ship the binaries for the target operating system](https://pietropassarelli.com/ffmpeg-electron.html)
+
+There is also [`ffprobe-static-electron`](https://github.com/pietrop/ffprobe-static-electron)
+
 ---
 
 ffmpeg static binaries for Mac OSX and Linux and Windows
