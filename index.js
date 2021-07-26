@@ -15,7 +15,7 @@ if (platform !== 'linux' && platform !== 'mac' && platform !== 'win' && platform
 }
 
 var arch = os.arch()
-if (platform === 'mac' && arch !== 'x64') {
+if (platform === 'mac' && (arch !== 'x64' &&  arch !== 'arm64' )) {
   console.error('Unsupported architecture.')
   process.exit(1)
 }
