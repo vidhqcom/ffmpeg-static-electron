@@ -1,12 +1,14 @@
 # `ffmpeg-static-electron`
 
-The module returns a file path to the binary for the target operating system. 
+> **Note:** This fork of `ffmpeg-static` includes a specific modification for Mac ARM64 (Apple Silicon) systems. While the original package used ffmpeg 2.0.3 for Mac ARM64, we have updated it to ffmpeg 7.1 with a custom build that includes support for the specific transport protocols and codecs required for our use case.
 
-It is a modified version from the original [ffmpeg-static](https://github.com/pietrop/ffmpeg-static) to use [`electron-builder` file macros  in `package.json`, where OS name are `mac`, `linux` or `win`](https://www.electron.build/file-patterns/#file-macros)
+The module returns a file path to the binary for the target operating system.
 
-In `ffmpeg-static`, recognising the target OS is done with [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform) where mac os x is  recognised as`darwin` rather then `mac`.
+It is a modified version from the original [ffmpeg-static](https://github.com/pietrop/ffmpeg-static) to use [`electron-builder` file macros in `package.json`, where OS name are `mac`, `linux` or `win`](https://www.electron.build/file-patterns/#file-macros)
 
-The need to tailor ffmpeg-static to use with `electron-builder` came from a use cases such as that of [autoEdit.io](http://autoEdit.io). 
+In `ffmpeg-static`, recognising the target OS is done with [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform) where mac os x is recognised as`darwin` rather then `mac`.
+
+The need to tailor ffmpeg-static to use with `electron-builder` came from a use cases such as that of [autoEdit.io](http://autoEdit.io).
 
 <!-- I've also added `browser`, as a platform option, for use case when module is use client side, eg bundled using browserify.-->
 
@@ -22,7 +24,7 @@ ffmpeg static binaries for Mac OSX and Linux and Windows
 
 This module is installed via npm:
 
-``` bash
+```bash
 $ npm install ffmpeg-static-electron
 ```
 
@@ -30,8 +32,8 @@ $ npm install ffmpeg-static-electron
 
 Returns the path of a statically linked ffmpeg binary on the local filesystem.
 
-``` js
-var ffmpeg = require('ffmpeg-static-electron');
+```js
+var ffmpeg = require("ffmpeg-static-electron");
 console.log(ffmpeg.path);
 // /Users/eugeneware/Dropbox/work/ffmpeg-static/bin/darwin/x64/ffmpeg
 ```
@@ -45,11 +47,11 @@ Windows.
 I pulled the versions from the ffmpeg static build pages linked from the
 official ffmpeg site. Namely:
 
-* [64 bit Mac OSX](https://evermeet.cx/ffmpeg/)
-* [64 bit Linux](http://johnvansickle.com/ffmpeg/)
-* [32 bit Linux](http://johnvansickle.com/ffmpeg/)
-* [64 bit Windows](http://ffmpeg.zeranoe.com/builds/win64/static/)
-* [32 bit Windows](http://ffmpeg.zeranoe.com/builds/win32/static/)
+- [64 bit Mac OSX](https://evermeet.cx/ffmpeg/)
+- [64 bit Linux](http://johnvansickle.com/ffmpeg/)
+- [32 bit Linux](http://johnvansickle.com/ffmpeg/)
+- [64 bit Windows](http://ffmpeg.zeranoe.com/builds/win64/static/)
+- [32 bit Windows](http://ffmpeg.zeranoe.com/builds/win32/static/)
 
 NB: Open to pull requests to update this module with the latest versions.
 
