@@ -1,6 +1,9 @@
 # `ffmpeg-static-electron`
 
-> **Note:** This fork of `ffmpeg-static` includes a specific modification for Mac ARM64 (Apple Silicon) systems. While the original package used ffmpeg 2.0.3 for Mac ARM64, we have updated it to ffmpeg 7.1 with a custom build that includes support for the specific transport protocols and codecs required for our use case.
+> **Note:** This fork of `ffmpeg-static` includes specific modifications:
+>
+> - For Mac ARM64 (Apple Silicon) systems, we have updated from ffmpeg 2.0.3 to ffmpeg 7.1 with a custom build that includes support for the specific transport protocols and codecs required for our use case.
+> - For x64 Mac and Windows systems, we have incorporated ffmpeg v4.3.1 from [KenCorma's repository](https://github.com/KenCorma/ffmpeg-static-electron-4-3-1-SRT/commit/5d8bbda8fe520acd770f747a79838caea16e38bd).
 
 The module returns a file path to the binary for the target operating system.
 
